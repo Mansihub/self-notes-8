@@ -1,0 +1,10 @@
+    
+  <button (click)="onClick()">greet</button>{{greeting}}
+  <button (click)="onClick2($event)">greet2</button>{{eventinfo}}
+  <button (click)="greet='Welcome Mansi'">greet3</button>{{greet}}
+  
+  <input #templateRefVariable type="text">
+  <button (click)='onClick3(templateRefVariable.value)'>click here to print the thing written in text box</button>
+  {{Textbox}}
+
+  <!-- content inside curly braces is evaluated and value is displayed when component is rendred in browser -->

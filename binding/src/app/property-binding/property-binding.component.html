@@ -1,0 +1,9 @@
+<input [id]=myId type="text" value="mansi">
+<!-- interpolation:can only work with string value -->
+<input id={{myId}} type="text" value="mansi">
+
+<input [disabled]="true" id={{myId}} type="text" value="mansi">
+<input [disabled]="isDisabled" id={{myId}} type="text" value="mansi">
+
+<!-- disabled={{false}} does not work -->
+
