@@ -1,0 +1,21 @@
+<h2 *ngIf="displayName ; else elseBlockId" >structural directives</h2>
+
+<ng-template #elseBlockId>
+<h2>to show in else part</h2>
+</ng-template>
+
+<h1 *ngIf="displayId; then ifblock;else elseblock">ngIf directive</h1>
+<ng-template #ifblock><h2>the if block</h2></ng-template>
+<ng-template #elseblock><h2>the else block</h2></ng-template>
+
+<div [ngSwitch]="color">
+<div *ngSwitchCase="'red'">you picked red</div>
+<div *ngSwitchCase="'yellow'">you picked yellow</div>
+<div *ngSwitchCase="'green'">you picked green</div>
+<div *ngSwitchDefault>pick again</div>
+</div>
+
+<div *ngFor="let house of houses;index as i;first as f;last as l;even as e;odd as o">
+  <h2>index: {{i}}, house color: {{house}}, first: {{f}}, last: {{l}}, even: {{e}}, odd: {{o}}</h2>
+</div>
+
