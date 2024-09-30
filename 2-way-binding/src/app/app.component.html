@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>
+    2 Way Binding
+  </h1>
+  <h2>{{message}}</h2>
+  <app-test (childEvent)="message=$event" [parentData]="name"></app-test>
+  <!-- the event contains the message sent (written after emit) by child component -->
+  <!-- we are binding childEvent(of childcomponent) to the message property of parent component -->
+  <!-- we are also passing the value of name property(of parentComponent) 
+    to the parentData(input property of childComponent)-->
+</div>
+
