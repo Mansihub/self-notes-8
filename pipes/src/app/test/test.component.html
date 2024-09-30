@@ -1,0 +1,32 @@
+
+<h2>our string is:   {{topic}}</h2>
+<h2>Now in lowercase using pipe: </h2>
+<H3> {{topic|lowercase}} </H3>
+<h2>Now in uppercase using pipe: </h2>
+<H3> {{topic|uppercase}} </H3>
+<h2>Now in titlecase using pipe: </h2>
+<H3> {{topic|titlecase}} </H3>
+<h2>Now in slice using pipe: </h2>
+<H3> {{topic|slice:2:11}} </H3>
+<!-- from 2 upto 11 not including 11th -->
+<h2>Now using json pipe to get json representation of the object: </h2>
+<H3> {{obj1|json}} </H3>
+<h2>noww comes the number pipe</h2>
+<h3>{{7.856|number:'1.2-3'}}</h3>
+<h3>{{7.856|number:'2.1-2'}}</h3>
+<h3>{{7.856|number:'3.2-4'}}</h3>
+
+<h2>noww comes the percent pipe</h2>
+<!-- <h3>{{25|percent}}</h3>output:2500% --> 
+<h3>{{0.25|percent}}</h3>  
+<!-- output of above is 25% -->
+<h2>noww comes the currency pipe</h2>
+<h3>{{25|currency}}</h3>  
+<h3>{{25|currency:'INR'}}</h3>  
+<!-- ISO currency codes are used -->
+<h3>{{25|currency:'INR':'code'}}</h3>  
+
+<h3>{{date}}</h3>  
+<h3>{{date|date:'short'}}</h3>  
+<h3>{{date|date:'shortDate'}}</h3>  
+<h3>{{date|date:'shortTime'}}</h3>  
