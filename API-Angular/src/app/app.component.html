@@ -1,0 +1,76 @@
+<h1>Get request result:</h1>
+<table>
+  <tr>
+    <th>postId</th>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>body</th>
+  </tr>
+  <tr *ngFor="let comment of listComments">
+    <td>{{comment.postId}}</td>
+    <td>{{comment.id}}</td>
+    <td>{{comment.name}}</td>
+    <td>{{comment.email}}</td>
+    <td>{{comment.body}}</td>
+  </tr>
+</table>
+
+
+<h1>Get request (Using Parameter) result:</h1>
+<table>
+  <tr>
+    <th>postId</th>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>body</th>
+  </tr>
+  <tr *ngFor="let comment of listPosts">
+    <td>{{comment.postId}}</td>
+    <td>{{comment.id}}</td>
+    <td>{{comment.name}}</td>
+    <td>{{comment.email}}</td>
+    <td>{{comment.body}}</td>
+    
+  </tr>
+</table>
+
+
+<h1>Data posted result:</h1>
+<ul>
+  <li>
+    {{postObject?.postId}}
+  </li>
+  <li> {{postObject?.id}}</li>
+  <li> {{postObject?.name}}</li>
+  <li> {{postObject?.email}}</li>
+  <li> {{postObject?.body}}</li>
+<!-- for error trying to access null/can not use property of undefined we can solve using nullable operator:{{postObject?.name}} -->
+</ul>
+
+<h1>PUT API->updated content for id 1: result:</h1>
+<ul>
+  <li>
+    {{putObject?.postId}}
+  </li>
+  <li> {{putObject?.id}}</li>
+  <li> {{putObject?.name}}</li>
+  <li> {{putObject?.email}}</li>
+  <li> {{putObject?.body}}</li>
+</ul>
+
+<h1>PATCH API->permanently updated content for id 1: result:</h1>
+<ul>
+  <li>
+    {{patchObject?.postId}}
+  </li>
+  <li> {{patchObject?.id}}</li>
+  <li> {{patchObject?.name}}</li>
+  <li> {{patchObject?.email}}</li>
+  <li> {{patchObject?.body}}</li>
+</ul>
+
+<h1>delete API</h1>
+<p>message:{{message}}</p>
+
